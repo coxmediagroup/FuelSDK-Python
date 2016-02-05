@@ -219,7 +219,6 @@ class ET_Perform(ET_Constructor):
 
     def __init__(self, auth_stub, action, obj_type, definition, options=None):
         auth_stub.refresh_token()
-        auth_stub.soap_client.set_options(soapheaders=None)
 
         parsed_options = self.parse_props_into_ws_object(auth_stub, 'PerformOptions', options) if options else None
         parsed_definition = self.parse_props_into_ws_object(auth_stub, obj_type, definition)
